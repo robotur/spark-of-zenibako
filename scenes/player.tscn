@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bnm3h6x6wg08n"]
+
+[ext_resource type="Texture2D" uid="uid://doek27tcj5exu" path="res://assets/images/player/Player.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://ce118cwdg5ll0" path="res://scripts/player.gd" id="1_g2els"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1vivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4flbx")
+}],
+"loop": 1,
+"name": &"test",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1066296446]
+scale = Vector2(4, 4)
+script = ExtResource("1_g2els")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=622273655]
+sprite_frames = SubResource("SpriteFrames_1vivr")
+animation = &"test"

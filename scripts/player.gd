@@ -4,7 +4,8 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-
+#this line runs the godot-specific functions
+#to make the player move
 func _physics_process(delta: float) -> void:
 	process_movement()
 	move_and_slide()

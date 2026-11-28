@@ -1,16 +1,34 @@
 [gd_scene format=3 uid="uid://bnm3h6x6wg08n"]
 
-[ext_resource type="Texture2D" uid="uid://doek27tcj5exu" path="res://assets/images/player/Player.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://ce118cwdg5ll0" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://bh1ljfbbdu0ai" path="res://assets/images/player/player_down.png" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://bumnjqkflk68a" path="res://assets/images/player/player_side.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://bb4ckmk15slav" path="res://assets/images/player/player_up.png" id="4_tuyoq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1vivr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_4flbx")
+"texture": ExtResource("2_dqkch")
 }],
-"loop": 1,
-"name": &"test",
+"loop": 0,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qlg0r")
+}],
+"loop": 0,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tuyoq")
+}],
+"loop": 0,
+"name": &"up",
 "speed": 5.0
 }]
 
@@ -20,4 +38,4 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=622273655]
 sprite_frames = SubResource("SpriteFrames_1vivr")
-animation = &"test"
+animation = &"right"
